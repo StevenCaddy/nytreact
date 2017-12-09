@@ -24,7 +24,7 @@ app.use(express.static(process.cwd() + '/public'));
 // Connect to localhost if not a production environment
 if(process.env.NODE_ENV == 'production'){
   // Gotten using `heroku config | grep MONGODB_URI` command in Command Line
-  mongoose.connect('mongodb://heroku_kbdv0v69:860jh71jd1iu5m5639gjr0gg9l@ds129028.mlab.com:29028/heroku_kbdv0v69');
+  mongoose.connect('mongodb://heroku_xzzl4hss:d9cmqltdlfjv9h8sll7qjqqmnp@ds133796.mlab.com:33796/heroku_xzzl4hss');
 }
 else{
   mongoose.connect('mongodb://localhost/nytreact');
@@ -46,12 +46,9 @@ var Article = require('./models/Article.js');
 // ---------------------------------------------------------------------------------------------------------------
 
 
-
 // Import Routes/Controller
 var router = require('./controllers/controller.js');
 app.use('/', router);
-
-
 
 // Launch App
 var port = process.env.PORT || 3000;
